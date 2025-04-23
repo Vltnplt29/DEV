@@ -1,5 +1,8 @@
-// 
-const myPosition = {}
+// Récupère ma position, par défaut sur Delta sur BXL
+const myPosition = {
+    latitude:50.81845321530931, 
+    longitude: 4.403189175551693
+}
 // Options pour la géolocalisation de l'user
 const options = {
     enableHighAccuracy: true,
@@ -25,6 +28,7 @@ const init = () => {
             navigator.geolocation.getCurrentPosition(okPosition, errorPosition, options)
         } else {
             console.log('bloqué')
+            initMap()
         }
     })
 }
@@ -40,6 +44,7 @@ const okPosition = (position) => {
 // Si error de geolocalisation
 const errorPosition = () => {
     console.log('demande refusée')
+    initMap()
 }
 init()
 
