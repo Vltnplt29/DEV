@@ -1,0 +1,59 @@
+{
+    "name": "Tec On Me",
+    "short_name": "TecOnMe",
+    "start_url": "./index.html",
+    "display": "fullscreen",
+    "background_color": "#ffffff",
+    "theme_color": "#3a7bd5",
+    "description": "Trouves les arrêts de bus autour de toi et les lignes ",
+    "icons": [
+      {
+        "src": "/icons/favicon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/favicon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png"
+      },
+      {
+        "src": "/icons/favicon-256x256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }
+    ],
+
+    "screenshots": [
+        {
+            "src": "icons/screenshot.png",
+            "sizes": "640x482",
+            "type": "image/png",
+            "form_factor": "wide",
+            "labe": "Start"
+        },
+        {
+            "src": "icons/screenshot2.png",
+            "sizes": "640x482",
+            "type": "image/png",
+            "form_factor": "wide",
+            "labe": "carte"
+        },
+
+        {
+            "src": "icons/screenshot-mobile.png",
+            "sizes": "320x320",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "labe": "Start"
+        },
+
+        {
+            "src": "icons/screenshot-mobile2.png",
+            "sizes": "320x320",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "labe": "carte"
+        }
+    ]
+}

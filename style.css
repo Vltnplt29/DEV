@@ -1,0 +1,51 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.install-button {
+    position: absolute;
+    left: 50%;
+    width: 276px;
+    height: 56px;
+    top: 10px;
+    margin-left: -108px;
+    padding: 20px;
+    background-color: yellow;
+    color: red;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+header {
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #ec4047;
+}
+
+.header-tec {
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1000; /* Pour qu’elle soit toujours au-dessus */
+    
+}
+
+#map {
+     height: 89dvh;
+
+}
+
+

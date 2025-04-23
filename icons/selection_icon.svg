@@ -1,0 +1,18 @@
+<svg width="36px" height="36px" viewBox="19 1 36 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1-Copy" filter="url(#filter-1)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(37.290041, 18.610585) rotate(5.000000) translate(-37.290041, -18.610585) translate(25.290041, 5.610585)">
+        <polygon id="Fill-1" fill="#F7A70E" points="10.4077385 -0.000132636724 0.000176848966 9.5616488 9.94395205 16.9778102 20.5411842 6.93942077"></polygon>
+        <polygon id="Fill-2" fill="#E07109" points="9.9437752 16.9778986 13.2353766 25.95431 23.2799557 16.3973919 20.5414495 6.93950919"></polygon>
+        <polygon id="Fill-3" fill="#EE8408" points="3.4852952 18.4239042 13.2354208 25.9545752 9.94381942 16.9777217 4.42122421e-05 9.56156038"></polygon>
+    </g>
+</svg>
