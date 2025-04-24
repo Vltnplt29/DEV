@@ -44,6 +44,11 @@ h1 {
     
 }
 
+.marker-link {
+    color: blue;
+    cursor: pointer;
+}
+
 #map {
      height: 89dvh;
 
