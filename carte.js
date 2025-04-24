@@ -1,24 +1,25 @@
+// Affichage et paramètre de l'icon de ma position
 const iconPosition = L.icon({
     iconUrl: 'icons/icon-map-user-location.svg',
     iconSize: [53, 53],
     iconAnchor: [16, 55],
     popupAnchor: [10,-37]
 })
-
+// Affichage et paramètre de l'icon stop
 const iconStop = L.icon({
     iconUrl: 'icons/icon-map-bus-stop.svg',
     iconSize: [53, 53],
     iconAnchor: [16, 55],
     popupAnchor: [10,-37]
 })
-
+// Affichage et paramètre de l'icon Start
 const iconStart = L.icon({
     iconUrl: 'icons/icon-map-bus-start.svg',
     iconSize: [53, 53],
     iconAnchor: [16, 55],
     popupAnchor: [10,-37]
 })
-
+// Affichage et paramètre de l'icon End
 const iconEnd = L.icon({
     iconUrl: 'icons/icon-map-bus-end.svg',
     iconSize: [53, 53],
@@ -58,7 +59,7 @@ const initMap = () => {
     /*
     //Philippeville
     let newPosition = {latitude:50.196241, longitude: 4.543508 }
-    affStops(map,newPosition)
+    affStops(map,newPosition, true or false)
     */
 
     map.on('click', function(e) {
@@ -94,6 +95,7 @@ const affStops = (map,position, start=false) => {
     //requête sur l'api des Tec
     const distance = 1
 
+    // Requête sur l'API des Tec en passant une position et une distance
    fetch(`https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/poteaux-tec/records?where=within_distance(geo_point_2d%2C%20geom%27POINT(${position.longitude}%20${position.latitude})%27%2C%20${distance}km)&limit=20&lang=fr`)
    .then(resp => resp.json())
    .then(resp => {
@@ -106,7 +108,8 @@ const affStops = (map,position, start=false) => {
             //deconstruction de l'objet
            const {lat, lon} = stop.geo_point_2d
            const {pot_nom_ha } = stop
-          
+            
+            
              let marker = L.marker([lat-0.000617, lon+0.0011], {icon:iconStop}).bindPopup(pot_nom_ha)
              if (!start) {
                 stopsLayer.addLayer(marker)
@@ -116,6 +119,7 @@ const affStops = (map,position, start=false) => {
         })
 
     })
+    // Si erreur renvoi dans la console et lance une alert
    .catch(err => {
        console.log(err)
        alert('')
